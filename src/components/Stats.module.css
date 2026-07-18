@@ -1,0 +1,50 @@
+.row {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 4rem 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.item {
+  text-align: center;
+}
+
+.number {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.03em;
+  color: var(--paper);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.number span {
+  color: var(--accent);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245, 240, 232, 0.4);
+}
+
+.desc {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(245, 240, 232, 0.6);
+  margin-top: 0.5rem;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .row { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 1.5rem; }
+}

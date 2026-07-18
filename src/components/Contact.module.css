@@ -1,0 +1,121 @@
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+}
+
+.headline {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.headline em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.accentDecor {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.accentDecor span {
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  opacity: 0.3;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.accentDecor span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.accentDecor span:nth-child(2) {
+  animation-delay: 0.3s;
+  opacity: 0.5;
+}
+
+.accentDecor span:nth-child(3) {
+  animation-delay: 0.6s;
+  opacity: 0.3;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+.body {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(14, 14, 14, 0.1);
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.link:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+.linkLabel {
+  overflow-wrap: anywhere;
+}
+
+.link:hover .linkArrow {
+  transform: translate(2px, -2px);
+}
+
+.linkArrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .headline {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .link {
+    padding: 1rem 1.1rem;
+  }
+}

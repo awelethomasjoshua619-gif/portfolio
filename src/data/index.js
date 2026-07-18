@@ -1,24 +1,24 @@
 export const PROJECTS = [
+  // {
+  //   num: '01',
+  //   name: 'MenuSync',
+  //   desc: 'A real-time restaurant menu manager designed to solve slow kitchen inventory updates. Built with React and structured CSS, featuring immediate UI updates and an offline-first local cache wrapper.',
+  //   tags: ['React', 'WebSockets', 'CSS'],
+  //   href: 'https://github.com/awelethomasjoshua619-gif/restaurant-website',
+  // },
   {
     num: '01',
-    name: 'MenuSync',
-    desc: 'A real-time restaurant menu manager designed to solve slow kitchen inventory updates. Built with React and structured CSS, featuring immediate UI updates and an offline-first local cache wrapper.',
-    tags: ['React', 'WebSockets', 'CSS'],
-    href: 'https://github.com/awelethomasjoshua619-gif/restaurant-website',
+    name: 'Weather App',
+    desc: 'A lightweight weather service focusing on low-bandwidth networks. Optimized with aggressive query caching and payload reduction strategies to load quickly on slow mobile networks.',
+    tags: ['React','JavaScript', 'REST API', 'Local Storage'],
+    href: 'https://weather-app-indol-theta-75.vercel.app/',
   },
   {
     num: '02',
-    name: 'SkyFlow Weather',
-    desc: 'A lightweight weather service focusing on low-bandwidth networks. Optimized with aggressive query caching and payload reduction strategies to load quickly on slow mobile networks.',
-    tags: ['JavaScript', 'REST API', 'Local Storage'],
-    href: 'https://github.com/awelethomasjoshua619-gif/weather-dashboard',
-  },
-  {
-    num: '03',
-    name: 'Sartorial E-Comm',
-    desc: 'An editorial storefront for a boutique fashion brand, featuring image optimization pipelines, instant filtering, and responsive grid layouts designed to load key media assets under 1 second.',
-    tags: ['React', 'CSS Modules', 'Vite'],
-    href: 'https://github.com/awelethomasjoshua619-gif/fashion-ecommerce',
+    name: 'HermioneHair',
+    desc: 'Hermione Hair — a full-stack e-commerce site (React/Vite, Node/Express, PostgreSQL/Prisma, Paystack)',
+    tags: ['React', 'CSS Modules', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Paystack'],
+    href: 'https://harminonehair.vercel.app/',
   },
 ]
 
@@ -55,20 +55,20 @@ export const CONTACT_LINKS = [
 
 export const STATS = [
   { 
-    num: '2', 
+    num: '1', 
     suffix: '+', 
-    label: 'Years of Experience',
+    label: 'Year of Experience',
     desc: 'Building responsive interfaces and clean React applications.'
   },
   { 
-    num: '15', 
+    num: '4', 
     suffix: '+', 
     label: 'Public Repositories',
     desc: 'Open-source projects, UI libraries, and code bases hosted on GitHub.'
   },
   { 
-    num: '3', 
-    suffix: '', 
+    num: '2', 
+    suffix: '+', 
     label: 'Production Web Apps',
     desc: 'Active commercial sites, client platforms, and deployed applications.'
   },

@@ -62,7 +62,7 @@ function StatItem({ num, suffix, label, desc }) {
   return (
     <div className={styles.item} ref={ref}>
       <span className={styles.number}>
-        {displayNum}<span>{suffix}</span>
+        <span>{suffix}</span>{displayNum}
       </span>
       <span className={styles.label}>{label}</span>
       {desc && <span className={styles.desc}>{desc}</span>}

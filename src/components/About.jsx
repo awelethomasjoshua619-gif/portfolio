@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { SKILLS } from '../data'
-import avatar from '../avatar.png'
+import avatar from '../avatar.jpg'
 import TechIcon from './TechIcons'
 import styles from './About.module.css'
 

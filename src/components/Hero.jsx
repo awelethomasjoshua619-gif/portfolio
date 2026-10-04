@@ -1,31 +1,34 @@
 import styles from './Hero.module.css'
+import avatar from '../avatar.jpg'
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
-
       <div className={styles.content}>
-        <p className={styles.eyebrow}>Frontend Developer · Open to Work</p>
+        <p className={styles.eyebrow}>Full-stack developer <span className={styles.eyebrowDivider}>/</span> Open to work</p>
         <h1 className={styles.title}>
-          Frontend developer<br />
-          building clean and<br />
-          functional <em>user</em><br />
-          interfaces.
+          Thoughtful<br />
+          websites.<br />
+          <em>Built for people.</em>
         </h1>
         <p className={styles.sub}>
-          I'm Awele, a developer focused on crafting responsive web experiences with React, semantic code, and robust layout systems. I focus on clean structure and reliable interactive states.
+          I’m Awele, a full-stack developer building useful web applications from the interface through to the server and data behind it.
         </p>
+        <div className={styles.actions}>
+          <a href="#work" className={styles.cta}>Explore my work <span className={styles.arrow} aria-hidden="true">↗</span></a>
+          <a href="#project-planner" className={styles.textLink}>Have a project? <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div className={styles.portraitArea} aria-label="Portrait of Awele Thomas Joshua">
+        <div className={styles.portraitFrame}>
+          <img src={avatar} alt="Awele Thomas Joshua" className={styles.portrait} />
+        </div>
       </div>
 
       <div className={styles.bottom}>
-        <a href="#work" className={styles.cta}>
-          View My Work
-          <span className={styles.arrow}>→</span>
-        </a>
-        <span className={styles.scrollHint}>
-          <span className={styles.scrollLine} />
-          Scroll
-        </span>
+        <span className={styles.location}>Based in Nigeria <span aria-hidden="true">↗</span></span>
+        <span className={styles.scrollHint}><span className={styles.scrollLine} /> Scroll to explore</span>
       </div>
     </section>
   )

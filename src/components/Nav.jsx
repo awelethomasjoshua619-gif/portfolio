@@ -4,8 +4,9 @@ import styles from './Nav.module.css'
 const LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Work', href: '#work' },
-  { label: 'Project Starter', href: '#project-planner' },
+  { label: 'Play Lagos Life', href: '/game' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Start a project', href: '#project-planner' },
 ]
 
 export default function Nav() {
@@ -43,7 +44,7 @@ export default function Nav() {
       <button
         className={styles.menuButton}
         onClick={toggleMenu}
-        aria-label="Toggle Menu"
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         aria-expanded={isMenuOpen}
       >
         <span className={styles.menuIcon} />
@@ -53,7 +54,7 @@ export default function Nav() {
         <ul className={styles.links}>
           {LINKS.map(({ label, href }) => (
             <li key={label}>
-              <a href={href} onClick={() => setMenuOpen(false)}>
+              <a className={href === '#project-planner' ? styles.primaryLink : ''} href={href} onClick={() => setMenuOpen(false)}>
                 {label}
               </a>
             </li>

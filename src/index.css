@@ -6,11 +6,11 @@
 
 :root {
   --ink: #111111;
-  --paper: #f4efe6;
-  --paper-mid: #e7dfd0;
-  --accent: #c85e36;
-  --accent-2: #315a63;
-  --muted: #6f675f;
+  --paper: #f5f1e9;
+  --paper-mid: #ebe5da;
+  --accent: #9b4d38;
+  --accent-2: #9b4d38;
+  --muted: #686159;
   --serif: 'DM Serif Display', Georgia, serif;
   --sans: 'DM Sans', system-ui, sans-serif;
 }
@@ -23,42 +23,30 @@
   background: var(--paper);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 99px;
+  background: var(--paper-mid);
+  border-radius: 0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ink);
+  background: var(--muted);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
-  background:
-    radial-gradient(circle at top right, rgba(200, 94, 54, 0.10), transparent 38%),
-    radial-gradient(circle at left 60%, rgba(49, 90, 99, 0.06), transparent 35%),
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* ─── Grain texture overlay ─── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 128px;
-  opacity: 0.028;
-  mix-blend-mode: multiply;
-}
+::selection { background: rgba(169, 75, 49, 0.2); color: var(--ink); }
 
 body.no-scroll {
   overflow: hidden;
@@ -88,7 +76,7 @@ a {
 .section {
   padding: 7rem 2.5rem;
   scroll-margin-top: 5rem;
-  max-width: 1400px;
+  max-width: 1500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -114,23 +102,6 @@ a {
   flex-shrink: 0;
 }
 
-/* ─── Reveal animation ─── */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 @keyframes scrollLine {
   0% { left: -100%; }
   50% { left: 0; }
@@ -139,6 +110,10 @@ a {
 
 @media (max-width: 768px) {
   .section { padding: 5rem 1.5rem; }
+}
+
+@media (min-width: 769px) {
+  .section { padding-right: clamp(2.5rem, 6vw, 6rem); padding-left: clamp(2.5rem, 6vw, 6rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {

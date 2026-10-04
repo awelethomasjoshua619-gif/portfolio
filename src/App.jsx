@@ -5,12 +5,15 @@ import Stats   from './components/Stats'
 import Work    from './components/Work'
 import Contact from './components/Contact'
 import Footer  from './components/Footer'
-import Cursor  from './components/Cursor'
+import LagosLife from './components/LagosLife'
 
 export default function App() {
+  if (window.location.pathname === '/game' || window.location.pathname === '/game/') {
+    return <LagosLife />
+  }
+
   return (
     <>
-      <Cursor />
       <Nav />
       <Hero />
       <div className="divider" />

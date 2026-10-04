@@ -20,6 +20,20 @@ export const PROJECTS = [
     tags: ['React', 'CSS Modules', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Paystack'],
     href: 'https://harminonehair.vercel.app/',
   },
+  {
+    num: '03',
+    name: 'Children Hope Foundation',
+    desc: 'A nonprofit platform built to share the foundation’s mission, connect supporters, and make it easier to learn about its work.',
+    tags: ['React', 'Vite', 'Community', 'Nonprofit'],
+    href: 'https://children-hope-foundation.vercel.app/',
+  },
+  {
+    num: '04',
+    name: 'CHEEF KEEF',
+    desc: 'A restaurant website showcasing the menu, brand, and dining experience with a warm, responsive design.',
+    tags: ['Next.js', 'React', 'Restaurant', 'Responsive UI'],
+    href: 'https://cheef-keef.vercel.app/',
+  },
 ]
 
 export const SKILLS = [
@@ -67,7 +81,7 @@ export const STATS = [
     desc: 'Open-source projects, UI libraries, and code bases hosted on GitHub.'
   },
   { 
-    num: '2', 
+    num: '4',
     suffix: '+', 
     label: 'Production Web Apps',
     desc: 'Active commercial sites, client platforms, and deployed applications.'

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { CONTACT_LINKS } from '../data'
+import ProjectPlanner from './ProjectPlanner'
 import styles from './Contact.module.css'
 
 export default function Contact() {
@@ -57,6 +58,9 @@ export default function Contact() {
             })}
           </div>
         </div>
+      </div>
+      <div className={styles.plannerWrap}>
+        <ProjectPlanner />
       </div>
     </section>
   )

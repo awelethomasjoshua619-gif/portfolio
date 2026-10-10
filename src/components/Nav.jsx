@@ -4,6 +4,7 @@ import styles from './Nav.module.css'
 const LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Work', href: '#work' },
+  { label: 'Certificate', href: '#certificate' },
   { label: 'Play Lagos Life', href: '/game' },
   { label: 'Contact', href: '#contact' },
   { label: 'Start a project', href: '#project-planner' },

@@ -52,11 +52,23 @@ export default function Work() {
 
               <p className={styles.desc}>{project.desc}</p>
 
-              <div className={styles.stackBlock}>
-                <p className={styles.metaLabel}>Tools &amp; technologies</p>
-                <ul className={styles.tags}>
-                  {project.tags.map((tag) => <li key={tag}>{tag}</li>)}
+              <div className={styles.workBlock}>
+                <p className={styles.metaLabel}>What I built</p>
+                <ul className={styles.workList}>
+                  {project.work.map((item) => <li key={item}>{item}</li>)}
                 </ul>
+              </div>
+
+              <div className={styles.stackBlock}>
+                <p className={styles.metaLabel}>Stack used</p>
+                <dl className={styles.stackList}>
+                  {project.stack.map(({ area, tools }) => (
+                    <div className={styles.stackRow} key={area}>
+                      <dt>{area}</dt>
+                      <dd>{tools.join(' · ')}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
 
               <div className={styles.challenge}>

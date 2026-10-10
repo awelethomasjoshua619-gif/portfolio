@@ -3,6 +3,7 @@ import Hero    from './components/Hero'
 import About   from './components/About'
 import Stats   from './components/Stats'
 import Work    from './components/Work'
+import Certificate from './components/Certificate'
 import Contact from './components/Contact'
 import Footer  from './components/Footer'
 import LagosLife from './components/LagosLife'
@@ -20,6 +21,7 @@ export default function App() {
       <About />
       <Stats />
       <Work />
+      <Certificate />
       <div className="divider" />
       <Contact />
       <Footer />

@@ -109,7 +109,7 @@
 .menuIcon::before { top: -0.35rem; }
 .menuIcon::after { top: 0.35rem; }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .nav { padding: 0.85rem 1.25rem; }
   .scrolled { padding-top: 0.7rem; padding-bottom: 0.7rem; }
   .menuButton { display: block; }

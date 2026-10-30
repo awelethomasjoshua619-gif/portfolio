@@ -39,13 +39,6 @@ const UPCOMING_CERTIFICATES = [
     platform: 'Coursera',
   },
   {
-    title: 'Building Web Applications in PHP',
-    issuer: 'University of Michigan',
-    field: 'Backend Web Development',
-    progress: 1,
-    platform: 'Coursera',
-  },
-  {
     title: 'Basic Robotic Behaviors and Odometry',
     issuer: 'University of Colorado Boulder',
     field: 'Robotics & Odometry',

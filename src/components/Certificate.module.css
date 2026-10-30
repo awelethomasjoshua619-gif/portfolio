@@ -3,20 +3,23 @@
 }
 
 .header {
+  margin-bottom: 2rem;
+}
+
+.headerText {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 2.75rem;
 }
 
 .headline {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(2.7rem, 5.5vw, 5rem);
+  font-size: clamp(2.4rem, 4.5vw, 4rem);
   font-weight: 400;
-  letter-spacing: -0.045em;
-  line-height: 0.98;
+  letter-spacing: -0.04em;
+  line-height: 1;
 }
 
 .headline em {
@@ -25,119 +28,170 @@
 }
 
 .intro {
-  max-width: 31ch;
-  padding-bottom: 0.25rem;
+  max-width: 34ch;
   color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.75;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* ─── Completed Certificates Section ─── */
+.completedSection {
+  margin-bottom: 2.75rem;
+}
+
+.sectionSubhead {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.sectionSubhead h3 {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.statusPillVerified {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  background: rgba(30, 120, 70, 0.12);
+  color: #17653b;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.completedGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+  gap: 1.25rem;
 }
 
 .card {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.65fr);
+  grid-template-columns: 200px 1fr;
   border: 1px solid rgba(17, 17, 17, 0.12);
   background: var(--paper-mid);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(155, 77, 56, 0.4);
+  box-shadow: 0 8px 24px rgba(17, 17, 17, 0.06);
 }
 
 .certificatePreview {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  align-self: center;
-  margin: clamp(1rem, 2.2vw, 2rem);
+  margin: 0.85rem;
   background: #fff;
+  border: 1px solid rgba(17, 17, 17, 0.08);
   line-height: 0;
 }
 
 .certificatePreview img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   transition: transform 220ms ease;
 }
 
 .certificatePreview:hover img {
-  transform: scale(1.015);
+  transform: scale(1.03);
 }
 
 .openLabel {
   position: absolute;
-  right: 0.8rem;
-  bottom: 0.8rem;
-  padding: 0.55rem 0.75rem;
-  background: var(--paper);
+  right: 0.4rem;
+  bottom: 0.4rem;
+  padding: 0.35rem 0.55rem;
+  background: rgba(245, 241, 233, 0.95);
+  backdrop-filter: blur(4px);
   color: var(--ink);
-  font-size: 0.67rem;
+  font-size: 0.6rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  line-height: 1.3;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
   text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: clamp(1.5rem, 4vw, 3.5rem);
-  border-left: 1px solid rgba(17, 17, 17, 0.12);
+  justify-content: space-between;
+  padding: 1.15rem 1.25rem;
+  border-left: 1px solid rgba(17, 17, 17, 0.1);
 }
 
 .issuer {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.35rem;
   color: var(--accent);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.details h3 {
-  max-width: 17ch;
+.details h4 {
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  font-size: 1.22rem;
   font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1.12;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 .metadata {
   display: grid;
-  gap: 1rem;
-  width: 100%;
-  margin: 2rem 0;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(17, 17, 17, 0.14);
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0.9rem 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 .metadata div {
   display: grid;
-  gap: 0.25rem;
+  gap: 0.15rem;
 }
 
 .metadata dt {
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .metadata dd {
   color: var(--ink);
-  font-size: 0.84rem;
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
 .verifyLink {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  min-height: 2.8rem;
-  padding: 0 1rem;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  min-height: 2.1rem;
+  padding: 0 0.85rem;
   background: var(--ink);
   color: var(--paper);
-  font-size: 0.68rem;
+  font-size: 0.64rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -149,12 +203,191 @@
   background: var(--accent);
 }
 
+/* ─── Upcoming Certificates Subsection ─── */
+.upcomingSection {
+  margin-top: 1rem;
+  padding-top: 2.25rem;
+  border-top: 1px dashed rgba(17, 17, 17, 0.15);
+}
+
+.upcomingHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.upcomingTitleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.upcomingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  background: rgba(155, 77, 56, 0.1);
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.upcomingBadgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.upcomingTitle {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.upcomingSubtitle {
+  color: var(--muted);
+  font-size: 0.86rem;
+  max-width: 50ch;
+  line-height: 1.5;
+}
+
+.upcomingCounter {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  background: var(--paper-mid);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.upcomingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.upcomingCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.1rem;
+  background: var(--paper-mid);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-top: 3px solid var(--accent);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.upcomingCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(155, 77, 56, 0.4);
+  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.05);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  margin-bottom: 0.65rem;
+}
+
+.issuerTag {
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.platformTag {
+  color: var(--muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
+  background: rgba(17, 17, 17, 0.05);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+}
+
+.upcomingCard h5 {
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+.fieldTag {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin-bottom: 1rem;
+}
+
+.progressContainer {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.07);
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  margin-bottom: 0.35rem;
+}
+
+.progressStatus {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.progressPercent {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: rgba(17, 17, 17, 0.1);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 400ms ease;
+}
+
 @media (max-width: 760px) {
-  .header {
-    align-items: flex-start;
+  .headerText {
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
-    margin-bottom: 2rem;
+  }
+
+  .completedGrid {
+    grid-template-columns: 1fr;
   }
 
   .card {
@@ -162,16 +395,23 @@
   }
 
   .certificatePreview {
-    margin: 1rem;
+    margin: 0.85rem;
+    max-height: 220px;
   }
 
   .details {
-    padding: 1.5rem;
-    border-top: 1px solid rgba(17, 17, 17, 0.12);
+    padding: 1.15rem;
+    border-top: 1px solid rgba(17, 17, 17, 0.1);
     border-left: 0;
   }
 
-  .metadata {
-    margin: 1.5rem 0;
+  .upcomingHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .upcomingGrid {
+    grid-template-columns: 1fr;
   }
 }

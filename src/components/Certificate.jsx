@@ -46,20 +46,6 @@ const UPCOMING_CERTIFICATES = [
     platform: 'Coursera',
   },
   {
-    title: 'Ethical Hacking with Kali Linux',
-    issuer: 'IBM',
-    field: 'Cybersecurity',
-    progress: 13,
-    platform: 'Coursera',
-  },
-  {
-    title: 'Introduction to Ethical Hacking Principles',
-    issuer: 'SkillUp EdTech',
-    field: 'Cybersecurity',
-    progress: 42,
-    platform: 'Coursera',
-  },
-  {
     title: 'Basic Robotic Behaviors and Odometry',
     issuer: 'University of Colorado Boulder',
     field: 'Robotics & Odometry',
